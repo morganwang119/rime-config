@@ -1,0 +1,27 @@
+patch:
+  schema_list:
+    - schema: rime_ice
+    - schema: double_pinyin_flypy
+    - schema: luna_pinyin_simp
+    - schema: luna_pinyin
+    - schema: luna_pinyin_fluency
+
+  menu/page_size: 5
+
+  ascii_composer:
+    good_old_caps_lock: true
+    switch_key:
+      Caps_Lock: noop
+      Shift_L: commit_code
+      Shift_R: inline_ascii
+      Control_L: noop
+      Control_R: noop
+
+  switcher:
+    hotkeys:
+      - Control+grave
+      - Control+Shift+grave
+    save_options:
+      - full_shape
+      - ascii_punct
+      - simplification

@@ -1,0 +1,46 @@
+# Rime table
+# coding: utf-8
+#@/db_name	custom_phrase_double.txt
+#@/db_type	tabledb
+#
+# 小鹤双拼自定义短语
+# 以 Tab 分割：词汇<Tab>编码<Tab>权重
+#
+# 此行之后不能写注释
+
+Morgan	morgan	100
+Novara	novara	100
+HazardScout	hazardscout	100
+GitHub	github	100
+Copilot	copilot	100
+Claude	claude	100
+Codex	codex	100
+Rime	rime	100
+VPN	vpn	100
+PR	pr	100
+MCP	mcp	100
+QA2	qa	100
+SSO	sso	100
+Paylocity	paylocity	100
+Outlook	outlook	100
+Teams	teams	100
+Slack	slack	100
+Jira	jira	100
+鼠须管	sxg	100
+雾凇拼音	wspy	100
+小鹤双拼	xhsp	100
+输入法	srf	100
+风险评估	fxpg	100
+risk assessment	risk	100
+risk assessment	ra	100
+code review	cr	100
+pull request	pr	90
+workflow	wf	100
+backend	be	100
+frontend	fe	100
+orchestrator	orch	100
+superadmin	superadmin	100
+deployment	deploy	100
+deploy	deploy	100
+preview	preview	100
+artifact	artifact	100

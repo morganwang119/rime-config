@@ -1,0 +1,210 @@
+# Rime table
+# coding: utf-8
+#@/db_name	custom_phrase.txt
+#@/db_type	tabledb
+#
+# 自定义短语
+# 可为方案增加一些要置顶的词汇及短语，例如邮箱、手机号、常用短语等等。编码可以随便起，不限于拼音。
+#
+# 适用于全拼。双拼默认为 custom_phrase_double.txt 需要手动创建，并更改上面的 db_name 为 custom_phrase_double.txt
+#
+# 以下固定的词汇及顺序纯属个人偏好，仅作示例，
+# 可以增加自己的 .txt 文件，并在方案的 custom_phrase/user_dict 指定为自己的文件。
+#
+# 以 Tab 分割：词汇<Tab>编码<Tab>权重
+#
+# 这个文件内的字词会占据最高权重（即排在候选项的最前面，因为指定了高权重 custom_phrase/initial_quality: 99）。
+# 但不与其他翻译器互相造词，如果使用了完整编码，那么这个字或词将无法参与造词，即自造词无法被记住。
+# 所以只建议固定非完整拼音的编码，如果需求是置顶指定拼音的候选项，请参考方案中的 pin_cand_filter。
+#
+# 最下面的英文是因为一些常用单词的第一候选项被纠错覆盖了，如 Amazon 被纠错为「a ma zong 阿妈粽」，期望的 Amazon 跑到第二个候选项了，所以这里给它固定死喽。
+#
+# version: "2024-03-12"
+#
+# 此行之后不能写注释
+
+噷	hm
+呣	m
+呒	m
+
+有	u	3
+又	u	2
+由	u	1
+
+一	i	4
+以	i	3
+已	i	2
+亦	i	1
+
+一个	ig
+有个	ug
+是一个	sig
+有一个	uig
+有一个	uyig
+有一个	uyige
+有没有	umu
+有没有	umeiu
+又有	uu
+又又又	uuu
+又双叒叕	uuuu
+
+go	go
+Golang	golang
+Hugo	hugo
+goto	goto
+domain	domain
+TODO	todo
+Dota	dota
+main	main
+Amazon	amazon
+NASA	nasa
+gone	gone
+Go程	gocheng
+code	code
+SOHO	soho
+
+Morgan	morgan	100
+Novara	novara	100
+HazardScout	hazardscout	100
+GitHub	github	100
+Copilot	copilot	100
+Claude	claude	100
+Codex	codex	100
+Rime	rime	100
+VPN	vpn	100
+PR	pr	100
+MCP	mcp	100
+QA2	qa	100
+SSO	sso	100
+Paylocity	paylocity	100
+Outlook	outlook	100
+Teams	teams	100
+Slack	slack	100
+Jira	jira	100
+Rime	ruan	80
+鼠须管	shuxuguan	100
+雾凇拼音	wusongpinyin	100
+小鹤双拼	xiaohe	100
+输入法	shurufa	100
+风险评估	fengxianpinggu	100
+风险评估	risk	80
+risk assessment	risk	100
+risk assessment	riskassessment	100
+code review	codereview	100
+pull request	pr	90
+workflow	workflow	100
+backend	backend	100
+frontend	frontend	100
+orchestrator	orchestrator	100
+superadmin	superadmin	100
+deployment	deployment	100
+deploy	deploy	100
+preview	preview	100
+artifact	artifact	100
+API	api	100
+REST API	restapi	100
+GraphQL	graphql	100
+TypeScript	typescript	100
+JavaScript	javascript	100
+Python	python	100
+React	react	100
+Next.js	nextjs	100
+Node.js	nodejs	100
+PostgreSQL	postgres	100
+Redis	redis	100
+Docker	docker	100
+Kubernetes	k8s	100
+GitHub Actions	ghactions	100
+CI/CD	cicd	100
+OAuth	oauth	100
+JWT	jwt	100
+JSON	json	100
+SQL	sql	100
+HTTP	http	100
+HTTPS	https	100
+WebSocket	websocket	100
+VS Code	vscode	100
+代码评审	devreview	100
+合并请求	devpr	100
+合并冲突	devconflict	100
+单元测试	devunit	100
+集成测试	devintegration	100
+端到端测试	deve2e	100
+回归测试	devregression	100
+测试用例	devcase	100
+复现步骤	devrepro	100
+预期行为	devexpected	100
+实际行为	devactual	100
+边界条件	devedge	100
+错误处理	deverror	100
+性能优化	devperf	100
+数据库迁移	devmigration	100
+接口文档	devapidoc	100
+环境变量	devenv	100
+本地环境	devlocal	100
+测试环境	devstaging	100
+生产环境	devprod	100
+回滚	devrollback	100
+技术债	devdebt	100
+向后兼容	devcompat	100
+验收标准	devaccept	100
+根因分析	devrca	100
+Thanks for flagging this. I'll take a look.	wklook	100
+Could you share the steps to reproduce this?	wkrepro	100
+Could you share the error message or relevant logs?	wklogs	100
+I've opened a PR. Could you take a look when you have a chance?	wkpr	100
+I've addressed the review comments. Could you take another look?	wkupdated	100
+I'm still investigating and will share an update when I know more.	wkinvestigate	100
+I'm blocked on access. I'll continue once it's available.	wkblocked	100
+The fix is ready for testing.	wktest	100
+I haven't been able to reproduce this locally yet.	wknorepro	100
+Thanks for the clarification.	wkthanks	100
+No rush — whenever you have a chance.	wknorush	100
+Could you clarify the expected behavior?	wkexpected	100
+我先看一下，确认后回复你。	wkkx	100
+方便提供一下复现步骤和报错日志吗？	wkfx	100
+修改已提交，麻烦有空帮忙看一下。	wktj	100
+我这边还在排查，有进展会同步。	wkpc	100
+这个改动可能影响现有逻辑，需要补充回归测试。	wkhg	100
+code review	devreview	90
+pull request	devpr	90
+merge conflict	devconflict	90
+unit testing	devunit	90
+integration testing	devintegration	90
+end-to-end testing	deve2e	90
+regression testing	devregression	90
+test case	devcase	90
+steps to reproduce	devrepro	90
+expected behavior	devexpected	90
+actual behavior	devactual	90
+edge case	devedge	90
+error handling	deverror	90
+performance optimization	devperf	90
+database migration	devmigration	90
+API documentation	devapidoc	90
+environment variable	devenv	90
+local environment	devlocal	90
+staging environment	devstaging	90
+production environment	devprod	90
+rollback	devrollback	90
+technical debt	devdebt	90
+backward compatibility	devcompat	90
+acceptance criteria	devaccept	90
+root cause analysis	devrca	90
+谢谢提醒，我看一下。	wklook	90
+方便提供一下复现步骤吗？	wkrepro	90
+方便提供一下报错信息或相关日志吗？	wklogs	90
+我已创建 PR，方便时麻烦帮忙看一下。	wkpr	90
+评审意见已处理，麻烦再帮忙看一下。	wkupdated	90
+我还在排查，有进一步发现会同步。	wkinvestigate	90
+目前卡在访问权限上，权限开通后我会继续。	wkblocked	90
+修复已就绪，可以开始测试。	wktest	90
+暂时还没能在本地复现这个问题。	wknorepro	90
+谢谢说明。	wkthanks	90
+不着急，你方便的时候处理就好。	wknorush	90
+能说明一下预期行为吗？	wkexpected	90
+I'll take a look and get back to you once I've checked.	wkkx	90
+Could you share the steps to reproduce this and the error logs?	wkfx	90
+I've submitted the changes. Could you take a look when you have a chance?	wktj	90
+I'm still investigating and will keep you posted.	wkpc	90
+This change may affect existing behavior, so we need additional regression tests.	wkhg	90
